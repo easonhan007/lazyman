@@ -3,7 +3,7 @@ begin
 rescue LoadError
 	puts 'you need using "gem install lazyman" to install lazyman first'
 end
-
+<% require 'active_support' %>
 Lazyman::Initializer.new(File.expand_path File.join('.'))
 $:.unshift(File.expand_path File.join('.'))
 
