@@ -3,7 +3,7 @@ require 'lazyman/errors'
 require 'ostruct'
 
 module Lazyman
-	class LazyConfig
+	class Config
 		attr_reader :hash_content, :content
 		
 		def initialize filepath

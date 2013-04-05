@@ -12,4 +12,5 @@ group :development do
   gem "rspec"
   gem "page-object"
   gem "watir-webdriver"
+  gem "active_support"
 end

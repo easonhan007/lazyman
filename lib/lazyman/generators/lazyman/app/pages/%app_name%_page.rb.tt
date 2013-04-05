@@ -1,0 +1,4 @@
+#encoding: utf-8
+<% require 'active_support/all' %>
+class <%= app_name.camelize%>Page < Lazyman::Page
+end

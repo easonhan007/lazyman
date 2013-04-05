@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "lazyman"
   gem.homepage = "http://github.com/nbkhic@qq.com/lazyman"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A simple web automation test framework}
+  gem.description = %Q{A test framework using watir-webdriver rspec and page-object}
   gem.email = "nbkhic@qq.com"
   gem.authors = ["easonhan"]
   # dependencies defined in Gemfile

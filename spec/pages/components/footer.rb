@@ -1,0 +1,2 @@
+module Footer
+end
