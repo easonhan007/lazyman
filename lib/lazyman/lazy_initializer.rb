@@ -4,6 +4,7 @@ module Lazyman
 			@root ||= root
 			load_all_components
 			load_all_pages
+			load_config
 			generate_pathes
 		end
 
@@ -23,6 +24,12 @@ module Lazyman
 				puts "#{page}" if $debug
 				require "#{page}"
 			end #each
+		end
+
+		def load_config
+			# hard code config file name here
+			@config_file = File.join @root, 'config', 'config.yml'
+			$config = Config.new(@config_file).content  
 		end
 
 		def generate_pathes

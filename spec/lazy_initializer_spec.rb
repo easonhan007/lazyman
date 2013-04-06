@@ -16,4 +16,9 @@ describe Lazyman::Initializer do
 		lambda {CustomModule1Page}.should_not raise_error
 	end
 
+	it 'should load config' do
+		Lazyman::Initializer.new File.dirname(__FILE__)
+		$config.host.should eq('www.example.com')
+	end
+
 end

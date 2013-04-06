@@ -12,7 +12,7 @@ require File.join($pages, '<%= app_name %>_navigator')
 
 RSpec.configure do |c|
 	c.before(:all) do
-		@navi = <%= app_name.camelize %>Navigator.new
+		@navi = <%= app_name.camelize %>Navigator.new $config
 	end
 
 	c.after(:all) do
