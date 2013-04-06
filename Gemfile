@@ -5,6 +5,11 @@ source "http://ruby.taobao.org"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
+gem "rspec"
+gem "page-object"
+gem "watir-webdriver"
+gem "active_support"
+
 group :development do
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.0.0"

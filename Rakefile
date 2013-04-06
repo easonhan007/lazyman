@@ -20,6 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{A simple web automation test framework}
   gem.description = %Q{A test framework using watir-webdriver rspec and page-object}
   gem.email = "nbkhic@qq.com"
+	gem.homepage = 'https://github.com/easonhan007/lazyman'
   gem.authors = ["easonhan"]
   # dependencies defined in Gemfile
 end
