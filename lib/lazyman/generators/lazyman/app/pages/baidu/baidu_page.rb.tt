@@ -1,3 +1,7 @@
 #encoding: utf-8
 class BaiduPage < <%= app_name.camelize%>Page
+	page_url 'www.baidu.com'
+	
+	text_field 'keyword', id: 'kw'
+	button 'search', id: 'su'
 end
