@@ -25,7 +25,7 @@ module Lazyman
 				if lazyman_page?(page_klass)
 					# define_method is private,so using send
 					self.class.send :define_method, "goto_#{page_klass.to_s.underscore}" do
-						page = page_klass.new(@browser)
+						page = Module.const_get(page_klass).new(@browser)
 						page.goto
 						page
 					end #define_method
