@@ -41,6 +41,14 @@ module Lazyman
 		end
 		alias_method :lazyman_page?, :valid_page_klass?
 
+		def method_missing(m, *args, &blk)
+			if @browser.respond_to? m
+				@browser.send(m, *args, &blk)
+			else
+				super
+			end #if
+		end
+
 
 	end
 

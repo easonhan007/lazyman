@@ -4,7 +4,7 @@ rescue LoadError
 	puts 'you need using "gem install lazyman" to install lazyman first'
 end
 <% require 'active_support/all' %>
-Lazyman::Initializer.new(File.expand_path File.join('.'), '<%= app_name %>')
+Lazyman::Initializer.new(File.expand_path(File.join('.')), '<%= app_name %>')
 $:.unshift(File.expand_path File.join('.'))
 
 RSpec.configure do |c|
