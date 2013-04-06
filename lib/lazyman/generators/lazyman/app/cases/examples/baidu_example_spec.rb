@@ -11,7 +11,7 @@ describe 'An example show you how to use lazyman' do
 		baidu_page = @navi.goto_baidu_page
 		baidu_page.keyword = @keyword
 		baidu_page.search_element.click
-		result_page = ResultPage.new baidu_page.browser
+		result_page = SearchResultPage.new baidu_page.browser
 		result_page.first_result.should eq 'watir-webdriver_百度百科'
 	end
 
