@@ -1,7 +1,15 @@
 #encoding: utf-8
+require 'app/pages/baidu/search_result_page'
 class BaiduPage < <%= app_name.camelize%>Page
 	page_url 'www.baidu.com'
 	
 	text_field 'keyword', id: 'kw'
 	button 'search', id: 'su'
+
+	def search_for kw
+		keywork= kw
+		search_element.click
+		SearchResultPage.new(@browser)
+	end
+
 end

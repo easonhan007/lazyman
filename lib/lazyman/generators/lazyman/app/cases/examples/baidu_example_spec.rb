@@ -3,10 +3,21 @@ require File.expand_path 'app/cases/spec_helper'
 
 describe 'An example show you how to use lazyman' do
 
+	before :all do
+		@keyword = 'watir-webdriver'
+	end
+
 	it 'should search baidu using key word' do
 		baidu_page = @navi.goto_baidu_page
-		baidu_page.keyword = 'watir-webdriver'
-		baidu_page.search.click
+		baidu_page.keyword = @keyword
+		baidu_page.search_element.click
+	end
+
+	it 'should have correct search result' do
+		baidu_page = @navi.goto_baidu_page
+		result_page = baidu_page.search_for @keyword
+		puts result_page.first_result
+		result_page.first_result.should eq 'watir-webdriver_百度百科'
 	end
 
 end
