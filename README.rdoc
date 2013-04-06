@@ -1,6 +1,25 @@
-= lazyman
+lazyman
+=====================
 
-Description goes here.
+A simple web automation test framework using [selenium-webdriver](http://docs.seleniumhq.org/projects/webdriver/),[watir-webdriver](https://github.com/watir/watir-webdriver),[page-object](https://github.com/cheezy/page-object) and rspec(https://github.com/rspec/rspec). 
+
+Now lazyman only tested in windows, other platformes are going to be tested soon.
+
+Install lazyman
+---------------
+Install lazyman from rubygems
+
+	gem install lazyman
+
+Or clone from github
+
+Create a lazyman project 
+------------------------
+In windows, open command console and type just like below:
+
+	lazyman new your_project_name	
+		
+
 
 == Contributing to lazyman
  
