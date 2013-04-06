@@ -1,17 +1,23 @@
 module Lazyman
 	class Initializer
-		def initialize root
+		def initialize root, app_name
 			@root ||= root
+			@app_name ||= app_name
+			load_app_page_and_navigator
 			load_all_components
 			load_all_pages
 			load_config
 			generate_pathes
 		end
 
-		def load_all_components
+		def load_app_page_and_navigator
 			@pages_path = File.join(@root, 'app', 'pages')
 			$:.unshift(@pages_path)
+			require File.join(@pages_path, "#{@app_name}_page")
+			require File.join(@pages_path, "#{@app_name}_navigator")
+		end
 
+		def load_all_components
 			@components_path = File.join(@pages_path, 'components')
 			Dir.glob(File.join @components_path, '**', '*.rb').select {|p| p =~ /\.rb$/}.each do |c|
 				puts c if $debug

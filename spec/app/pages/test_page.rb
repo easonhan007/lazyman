@@ -1,6 +1,4 @@
-puts 'required files in pages' if $debug
+puts 'required app pages' if $debug
 class TestPage < Lazyman::Page
 end
 
-class CustomTestPage < Lazyman::Page
-end
