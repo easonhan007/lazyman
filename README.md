@@ -3,6 +3,8 @@ lazyman
 
 A simple web automation test framework using [selenium-webdriver](http://docs.seleniumhq.org/projects/webdriver/),[watir-webdriver](https://github.com/watir/watir-webdriver),[page-object](https://github.com/cheezy/page-object) and [rspec](https://github.com/rspec/rspec). 
 
+The philosophy of lazyman is 'do less, gain more'.
+
 Now lazyman only tested in windows, other platformes are going to be tested soon.
 
 Install lazyman
