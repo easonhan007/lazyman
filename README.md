@@ -19,6 +19,18 @@ In windows, open command console and type just like below:
 
 	lazyman new your_project_name	
 		
+Run Examples
+------------
+
+Lazyman contains some examples that explain how to use lazyman writing your own test cases.
+
+Using following command to make everything running.
+
+	cd your_project_name
+	rspec -f doc
+
+Understand lazyman project structure
+------------------------------------
 
 
 Contributing to lazyman
