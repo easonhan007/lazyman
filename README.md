@@ -13,6 +13,11 @@ Install lazyman from rubygems
 
 Or clone from github
 
+If you have any issue when install lazyman, install the gems below:
+	
+	gem install thor
+
+
 Create a lazyman project 
 ------------------------
 In windows, open command console and type just like below:
@@ -31,6 +36,21 @@ Using following command to make everything running.
 
 Understand lazyman project structure
 ------------------------------------
+
+Lazyman project has a clean and simple structure. 
+
+* app: holds your test codes;
+* config: where your config file placed;
+
+* app->pages: puts all your pages files here;
+* app->pages->components: sometimes,there are some html element that could be reused more than once, define a component, place the file here and you can include your components in your pages.
+
+* app->cases: holds your testcase files;
+* app->cases->shared: Image that, you are testing a system which need to login before any actions, so you want to define a login function which can be called from your cases. Define reused cases here.
+
+* app->reports: the fold holds your test reports.
+
+* app->matchers: defind your owner rspec matchers here.
 
 
 Contributing to lazyman
