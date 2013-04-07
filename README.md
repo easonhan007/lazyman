@@ -29,6 +29,8 @@ Run Examples
 
 Lazyman contains some examples that explain how to use lazyman writing your own test cases.
 
+By default, lazyman runs examples using chrome browser, so make sure you installed google chrome and according [chrome driver](http://code.google.com/p/chromedriver/downloads/list)
+
 Using following command to make everything running.
 
 	cd your_project_name
