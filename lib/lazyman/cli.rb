@@ -10,7 +10,7 @@ module Lazyman
 			File.join File.dirname(__FILE__), 'generators'
 		end
 
-		desc 'create project', 'create a lazyman project'
+		desc 'new project', 'create a lazyman project'
 
 		def new
 			if app_name
