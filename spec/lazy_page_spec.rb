@@ -27,5 +27,18 @@ describe Lazyman::Page do
 		p = Lazyman::Page.new(@browser).turn_to TestPage
 		p.is_a?(TestPage).should be_true
 	end
+
+	it 'should data driven with hash' do
+		btn = double();
+		hash = {:one => 'click', :two => 'ok'}
+		
+		p = TestPage.new(@browser)
+		p.stub(:one).and_return(btn)
+		p.stub(:two=)
+		btn.should_receive(:click)
+		p.should_receive(:one)
+		p.should_receive(:two=).with('ok')
+		p.data_driven(hash)
+	end
 	
 end

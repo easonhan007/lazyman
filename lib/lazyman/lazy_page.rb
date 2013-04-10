@@ -15,6 +15,19 @@ module Lazyman
 			kls.new(@browser)
 		end
 
+		def data_driven hash, &blk
+			raise ArgumentError unless hash.is_a?(Hash)
+			hash.each do |mtd, data|
+				m_with_eql = (mtd.to_s + '=').to_sym
+				if respond_to?(m_with_eql)
+					send(m_with_eql, data)
+				elsif respond_to?(mtd.to_sym)
+					send(mtd.to_sym).send(data.to_sym) 
+				end #if
+			end #each
+			class_eval &blk if block_given?
+		end
+
 	end #Page
 
 end #Lazyman
