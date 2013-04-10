@@ -19,6 +19,14 @@ module Lazyman
 				say 'no app name'
 			end 
 		end
+
+		desc 'go', 'run test case with rspec'
+
+		def go
+			ARGV.shift
+			puts "rspec #{ARGV.join('')}" if $debug
+			run "rspec #{ARGV.join('')}"
+		end
 		
 	end
 CLI.start
