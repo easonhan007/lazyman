@@ -1,3 +1,4 @@
+require 'errors'
 module Lazyman
 	class Page
 		include PageObject	
@@ -11,7 +12,7 @@ module Lazyman
 		end 
 
 		def turn_to kls
-			raise "#{kls} is not a instance of Lazyman::Page" unless kls <= Lazyman::Page
+			raise InvalidLazymanPageError unless kls <= Lazyman::Page
 			kls.new(@browser)
 		end
 

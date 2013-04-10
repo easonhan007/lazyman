@@ -1,4 +1,7 @@
 require 'rubygems' #for ruby187
+require 'erb'
+require 'psych'
+
 begin
 	require 'lazyman'
 rescue LoadError
@@ -9,6 +12,17 @@ Lazyman::Initializer.new(File.expand_path(File.join('.')), '<%= app_name %>')
 $:.unshift(File.expand_path File.join('.'))
 
 RSpec.configure do |c|
+
+	def test_data file
+		content = ''
+		file_path = File.expand_path(File.join('..', 'test_data', "#{file}.yaml"))
+		raise "Can not find #{file}.yaml" unless File.exists(file_path)
+		File.open(file_path, 'r') do |handle|
+			content = handle.read
+		end
+		Psych.load ERB.new(content).result(binding)
+	end
+	
 	c.before(:all) do
 		$navi = <%= app_name.camelize %>Navigator.new $config
 	end
