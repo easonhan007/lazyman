@@ -21,7 +21,8 @@ module Lazyman
 			hash.each do |mtd, data|
 				m_with_eql = (mtd.to_s + '=').to_sym
 				if respond_to?(m_with_eql)
-					self.send(m_with_eql, data)
+					#self.send(m_with_eql, data)
+					eval "self.#{m_with_eql.to_s}(data)"
 				elsif respond_to?(mtd.to_sym)
 					self.send(mtd.to_sym).send(data.to_sym) 
 				end #if
