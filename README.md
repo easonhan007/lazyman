@@ -5,7 +5,7 @@ A simple web automation test framework using [selenium-webdriver](http://docs.se
 
 The philosophy of lazyman is 'do less, gain more'.
 
-Now lazyman only tested in windows, other platformes are going to be tested soon.
+Now lazyman only tested in windows with Ruby193, other platformes are going to be tested soon.
 
 Install lazyman
 ---------------
@@ -13,7 +13,7 @@ Install lazyman from rubygems
 
 	gem install lazyman
 
-Or clone from github
+Or clone from github, build the gem and install 
 
 If you have any issue when install lazyman, install the gems below:
 	
