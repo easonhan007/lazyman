@@ -8,7 +8,7 @@ class BaiduPage < <%= app_name.camelize%>Page
 	button 'search', id: 'su'
 
 	def search_for kw
-		keyword=kw
+		self.keyword = kw
 		search_element.click
 		turn_to SearchResultPage
 	end

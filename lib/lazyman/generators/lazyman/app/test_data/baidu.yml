@@ -1,4 +1,4 @@
 ---
 one:
-  keyword=: 'watir-webdriver'
+  keyword=: '<%= 1.day.ago %>'
   search_element: 'click'

@@ -15,8 +15,8 @@ RSpec.configure do |c|
 
 	def test_data file
 		content = ''
-		file_path = File.expand_path(File.join('..', 'test_data', "#{file}.yaml"))
-		raise "Can not find #{file}.yaml" unless File.exists(file_path)
+		file_path = File.expand_path(File.join('.', 'app', 'test_data', "#{file}.yml"))
+		raise "Can not find #{file}.yml" unless File.exists?(file_path)
 		File.open(file_path, 'r') do |handle|
 			content = handle.read
 		end
