@@ -1,4 +1,4 @@
-require 'errors'
+require 'lazyman/errors'
 module Lazyman
 	class Page
 		include PageObject	
