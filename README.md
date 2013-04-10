@@ -36,7 +36,11 @@ By default, lazyman runs examples using chrome browser, so make sure you install
 Using following command to make everything running.
 
 	cd your_project_name
+	lazyman go -f doc  
+or
 	rspec -f doc
+
+lazyman go command supports all the rspec options and it is the recommend way.
 
 Understand lazyman project structure
 ------------------------------------
