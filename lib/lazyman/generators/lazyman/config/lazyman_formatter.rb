@@ -2,11 +2,11 @@ require 'erb'
 require 'rspec/core/formatters/base_text_formatter'
 
 module Lazyman
-	class LazymanFormatter < BaseTextFormatter
+	class LazymanFormatter < ::RSpec::Core::Formatters::BaseTextFormatter
 		include ERB::Util # for the #h method
 
 		def initialize(output)
-			output ||= File.new(File.expand_path(File.join('.', 'app', 'reports', "#{Time.now.strftime("%Y%m%d_%H%M%S")}.html")), 'w')
+			output = File.new(File.expand_path(File.join('.', 'app', 'reports', "#{Time.now.strftime("%Y%m%d_%H%M%S")}.html")), 'w')
 			super(output)
 			@example_group_number = 0
 			@example_number = 0
