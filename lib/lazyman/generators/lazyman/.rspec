@@ -1,1 +1,3 @@
 --default-path=./app/cases
+--format Lazyman::LazymanFormatter
+-r ./config/lazyman_formatter.rb
