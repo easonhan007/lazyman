@@ -74,7 +74,7 @@ module Lazyman
 			super(example)
 			exception = example.metadata[:execution_result][:exception]
 			extra = extra_failure_content(exception)
-			@output.puts "    <script type=\"text/javascript\">makeRed('rspec-header');</script>" unless @header_red
+			@output.puts "    <script type=\"text/javascript\">makeRed('lazyman-header');</script>" unless @header_red
 			@header_red = true
 			@output.puts "    <script type=\"text/javascript\">makeRed('div_group_#{example_group_number}');</script>" unless @example_group_red
 			@output.puts "    <script type=\"text/javascript\">makeRed('example_group_#{example_group_number}');</script>" unless @example_group_red
@@ -95,7 +95,7 @@ module Lazyman
 
 		def example_pending(example)
 			message = example.metadata[:execution_result][:pending_message]
-			@output.puts "    <script type=\"text/javascript\">makeYellow('rspec-header');</script>" unless @header_red
+			@output.puts "    <script type=\"text/javascript\">makeYellow('lazyman-header');</script>" unless @header_red
 			@output.puts "    <script type=\"text/javascript\">makeYellow('div_group_#{example_group_number}');</script>" unless @example_group_red
 			@output.puts "    <script type=\"text/javascript\">makeYellow('example_group_#{example_group_number}');</script>" unless @example_group_red
 			move_progress
@@ -110,7 +110,7 @@ module Lazyman
 			require 'rspec/core/formatters/snippet_extractor'
 			backtrace = exception.backtrace.map {|line| backtrace_line(line)}
 			backtrace.compact!
-			@snippet_extractor ||= SnippetExtractor.new
+			@snippet_extractor ||= ::RSpec::Core::Formatters::SnippetExtractor.new
 			"    <pre class=\"ruby\"><code>#{@snippet_extractor.snippet(backtrace)}</code></pre>"
 		end
 
@@ -190,9 +190,9 @@ EOF
 
 		def report_header
 			<<-EOF
-<div class="rspec-report">
+<div class="lazyman-report">
 
-<div id="rspec-header">
+<div id="lazyman-header">
 <div id="label">
 <h1>Lazyman Report</h1>
 </div>
@@ -228,7 +228,7 @@ elem.className = classlist;
 }
 
 function moveProgressBar(percentDone) {
-document.getElementById("rspec-header").style.width = percentDone +"%";
+document.getElementById("lazyman-header").style.width = percentDone +"%";
 }
 
 function makeRed(element_id) {
@@ -295,11 +295,11 @@ EOF
 
 		def global_styles
 			<<-EOF
-#rspec-header {
+#lazyman-header {
 background: #65C400; color: #fff; height: 4em;
 }
 
-.rspec-report h1 {
+.lazyman-report h1 {
 margin: 0px 10px 0px 10px;
 padding: 10px;
 font-family: "Lucida Grande", Helvetica, sans-serif;
@@ -399,15 +399,15 @@ color: #FFFFFF; background: #C40D0D;
 }
 
 
-#rspec-header.not_implemented {
+#lazyman-header.not_implemented {
 color: #000000; background: #FAF834;
 }
 
-#rspec-header.pending_fixed {
+#lazyman-header.pending_fixed {
 color: #FFFFFF; background: #C40D0D;
 }
 
-#rspec-header.failed {
+#lazyman-header.failed {
 color: #FFFFFF; background: #C40D0D;
 }
 
