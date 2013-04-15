@@ -1,7 +1,7 @@
 #encoding: utf-8
 require File.expand_path 'app/cases/spec_helper'
 
-describe 'An example show you how to use lazyman', :baidu do
+describe 'Baidu example show you how to use lazyman', :baidu do
 
 	before :all do
 		@keyword = 'watir-webdriver'

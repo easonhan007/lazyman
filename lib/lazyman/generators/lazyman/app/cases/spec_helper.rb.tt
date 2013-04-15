@@ -1,3 +1,4 @@
+ENV.delete 'HTTP_PROXY' if ENV['HTTP_PROXY']
 require 'rubygems' #for ruby187
 require 'erb'
 require 'psych'
@@ -31,11 +32,11 @@ RSpec.configure do |c|
 		Psych.load ERB.new(content).result(binding)
 	end
 	
-	c.before(:all) do
+	c.before(:suite) do
 		$navi = <%= app_name.camelize %>Navigator.new $config
 	end
 
-	c.after(:all) do
+	c.after(:suite) do
 		$navi.close
 	end
 end
