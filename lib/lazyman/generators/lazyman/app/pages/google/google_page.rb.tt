@@ -9,7 +9,7 @@ class GooglePage < <%= app_name.camelize%>Page
 
 	def search_for kw
 		self.keyword = kw
-		search_element.click
+		self.keyword_element.send_keys :return
 		turn_to GoogleSearchResultPage
 	end
 
