@@ -7,11 +7,19 @@ begin
 rescue LoadError
 	puts 'you need using "gem install lazyman" to install lazyman first'
 end
+
 <% require 'active_support/all' %>
 Lazyman::Initializer.new(File.expand_path(File.join('.')), '<%= app_name %>')
 $:.unshift(File.expand_path File.join('.'))
 
 RSpec.configure do |c|
+	c.treat_symbols_as_metadata_keys_with_true_values = true
+
+	unless($config.tags.empty?)
+		tags = tags.lazy_to_hash
+	end 
+
+	c.filter_run tags
 
 	def test_data file
 		content = ''
