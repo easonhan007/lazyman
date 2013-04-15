@@ -1,0 +1,16 @@
+#encoding: utf-8
+require File.expand_path 'app/pages/baidu/google_search_result_page'
+
+class BaiduPage < <%= app_name.camelize%>Page
+	page_url 'www.google.com.hk'
+	
+	text_field 'keyword', name: 'q'
+	button 'search', name: 'btnK'
+
+	def search_for kw
+		self.keyword = kw
+		search_element.click
+		turn_to GoogleSearchResultPage
+	end
+
+end
