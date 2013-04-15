@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["easonhan"]
-  s.date = "2013-04-11"
+  s.date = "2013-04-15"
   s.description = "A test framework using watir-webdriver rspec and page-object"
   s.email = "nbkhic@qq.com"
   s.executables = ["lazyman"]
@@ -32,8 +32,10 @@ Gem::Specification.new do |s|
     "lib/lazyman.rb",
     "lib/lazyman/cli.rb",
     "lib/lazyman/errors.rb",
+    "lib/lazyman/ext/string.rb",
     "lib/lazyman/generators/lazyman/.rspec",
     "lib/lazyman/generators/lazyman/app/cases/examples/baidu_example_spec.rb",
+    "lib/lazyman/generators/lazyman/app/cases/examples/google_example_spec.rb",
     "lib/lazyman/generators/lazyman/app/cases/shared/.empty_directory",
     "lib/lazyman/generators/lazyman/app/cases/spec_helper.rb.tt",
     "lib/lazyman/generators/lazyman/app/matchers/.empty_directory",
@@ -42,6 +44,8 @@ Gem::Specification.new do |s|
     "lib/lazyman/generators/lazyman/app/pages/baidu/baidu_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/pages/baidu/search_result_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/pages/components/.empty_directory",
+    "lib/lazyman/generators/lazyman/app/pages/google/google_page.rb.tt",
+    "lib/lazyman/generators/lazyman/app/pages/google/google_search_result_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/reports/.empty_directory",
     "lib/lazyman/generators/lazyman/app/test_data/baidu.yml",
     "lib/lazyman/generators/lazyman/config/config.yml",
