@@ -1,5 +1,5 @@
 #encoding: utf-8
-require File.expand_path 'app/pages/baidu/google_search_result_page'
+require File.expand_path 'app/pages/google/google_search_result_page'
 
 class GooglePage < <%= app_name.camelize%>Page
 	page_url 'www.google.com.hk'
