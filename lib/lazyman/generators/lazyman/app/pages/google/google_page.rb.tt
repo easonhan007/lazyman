@@ -11,7 +11,7 @@ class GooglePage < <%= app_name.camelize%>Page
 		self.keyword = kw
 		self.keyword_element.send_keys :return
 		# example show you how to use wait_until_present
-		@browser.button(name: 'btnG').wait_until_present
+		@browser.table(id: 'nav').wait_until_present
 		turn_to GoogleSearchResultPage
 	end
 
