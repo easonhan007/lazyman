@@ -15,12 +15,19 @@ $:.unshift(File.expand_path File.join('.'))
 
 RSpec.configure do |c|
 	c.treat_symbols_as_metadata_keys_with_true_values = true
+	c.run_all_when_everything_filtered = true
+	c.alias_example_to :case
+	c.alias_it_should_behave_like_to :include_shared
 
 	unless($config.tags.empty?)
-		tags = $config.tags.lazy_to_hash
+		tags = case 
+			when String
+				$config.tags.lazy_to_hash
+			when Hash
+				$config.tags
+			end #case
+		c.filter_run tags
 	end 
-
-	c.filter_run tags
 
 	def test_data file
 		content = ''
