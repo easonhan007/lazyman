@@ -3,7 +3,6 @@ class String
 		hash = { }
 		return hash if self.empty?
 		arr = self.split(',').map { |i| i.strip }
-		p arr
 		arr.each do |key|
 			hash[key.to_sym] = true 
 		end #each
