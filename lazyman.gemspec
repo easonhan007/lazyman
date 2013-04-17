@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "lazyman"
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["easonhan"]
@@ -71,7 +71,8 @@ Gem::Specification.new do |s|
     "spec/lazy_page_spec.rb",
     "spec/pages/components/footer.rb",
     "spec/pages/test_page.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/string_spec.rb"
   ]
   s.homepage = "https://github.com/easonhan007/lazyman"
   s.licenses = ["MIT"]
