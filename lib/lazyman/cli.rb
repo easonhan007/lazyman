@@ -27,6 +27,11 @@ module Lazyman
 			puts "rspec #{ARGV.join('')}" if $debug
 			run "rspec #{ARGV.join('')}"
 		end
+
+		desc 'console', 'open lazyman console'
+		def c
+			run 'bin/console'
+		end
 		
 	end
 CLI.start

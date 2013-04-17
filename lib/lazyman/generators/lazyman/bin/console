@@ -2,4 +2,4 @@
 
 spec_helper = File.expand_path(File.join('.', 'app', 'cases', 'spec_helper.rb'))
 
-exec "irb -r #{spec_helper} -r irb/completion --simple-prompt --readline"
+exec "irb -r rspec -r #{spec_helper} -r irb/completion --simple-prompt --readline"
