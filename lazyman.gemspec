@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "lazyman"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["easonhan"]
-  s.date = "2013-04-15"
+  s.date = "2013-04-17"
   s.description = "A test framework using watir-webdriver rspec and page-object"
   s.email = "nbkhic@qq.com"
   s.executables = ["lazyman"]
@@ -48,6 +48,9 @@ Gem::Specification.new do |s|
     "lib/lazyman/generators/lazyman/app/pages/google/google_search_result_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/reports/.empty_directory",
     "lib/lazyman/generators/lazyman/app/test_data/baidu.yml",
+    "lib/lazyman/generators/lazyman/bin/console",
+    "lib/lazyman/generators/lazyman/bin/console.bat",
+    "lib/lazyman/generators/lazyman/bin/setup.rb.tt",
     "lib/lazyman/generators/lazyman/config/config.yml",
     "lib/lazyman/generators/lazyman/config/lazyman_formatter.rb",
     "lib/lazyman/lazy_config.rb",
