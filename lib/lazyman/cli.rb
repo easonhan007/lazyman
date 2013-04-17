@@ -11,7 +11,6 @@ module Lazyman
 		end
 
 		desc 'new project', 'create a lazyman project'
-
 		def new
 			if app_name
 				directory 'lazyman', app_name
@@ -21,14 +20,13 @@ module Lazyman
 		end
 
 		desc 'go', 'run test case with rspec'
-
 		def go
 			ARGV.shift
 			puts "rspec #{ARGV.join('')}" if $debug
 			run "rspec #{ARGV.join('')}"
 		end
 
-		desc 'console', 'open lazyman console'
+		desc ' console', 'open lazyman console'
 		def c
 			run 'bin/console'
 		end
