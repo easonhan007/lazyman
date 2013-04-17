@@ -26,7 +26,7 @@ module Lazyman
 			run "rspec #{ARGV.join('')}"
 		end
 
-		desc ' console', 'open lazyman console'
+		desc 'c', 'open lazyman console'
 		def c
 			run 'bin/console'
 		end
