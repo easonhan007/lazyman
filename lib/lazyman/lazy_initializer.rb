@@ -3,10 +3,10 @@ module Lazyman
 		def initialize root, app_name
 			@root ||= root
 			@app_name ||= app_name
+			load_config
 			load_app_page_and_navigator
 			load_all_components
 			load_all_pages
-			load_config
 			generate_pathes
 		end
 
