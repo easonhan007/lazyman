@@ -1,0 +1,8 @@
+#encoding: utf-8
+
+class MyViewPage < <%= app_name.camelize%>Page
+	include Menu
+
+	page_url "#{$config.host}my_view_page.php"
+	
+end

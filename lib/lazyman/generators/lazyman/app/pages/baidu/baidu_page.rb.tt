@@ -1,6 +1,4 @@
 #encoding: utf-8
-require File.expand_path 'app/pages/baidu/search_result_page'
-
 class BaiduPage < <%= app_name.camelize%>Page
 	page_url 'www.baidu.com'
 	
