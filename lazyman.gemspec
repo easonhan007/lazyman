@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "lazyman"
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["easonhan"]
@@ -34,9 +34,10 @@ Gem::Specification.new do |s|
     "lib/lazyman/errors.rb",
     "lib/lazyman/ext/string.rb",
     "lib/lazyman/generators/lazyman/.rspec",
-    "lib/lazyman/generators/lazyman/app/cases/examples/baidu_example_spec.rb",
-    "lib/lazyman/generators/lazyman/app/cases/examples/google_example_spec.rb",
-    "lib/lazyman/generators/lazyman/app/cases/shared/.empty_directory",
+    "lib/lazyman/generators/lazyman/app/cases/baidu_and_google/baidu_example_spec.rb",
+    "lib/lazyman/generators/lazyman/app/cases/baidu_and_google/google_example_spec.rb",
+    "lib/lazyman/generators/lazyman/app/cases/mantis/report_issue_spec.rb",
+    "lib/lazyman/generators/lazyman/app/cases/shared/login.rb",
     "lib/lazyman/generators/lazyman/app/cases/spec_helper.rb.tt",
     "lib/lazyman/generators/lazyman/app/matchers/.empty_directory",
     "lib/lazyman/generators/lazyman/app/pages/%app_name%_navigator.rb.tt",
@@ -44,10 +45,16 @@ Gem::Specification.new do |s|
     "lib/lazyman/generators/lazyman/app/pages/baidu/baidu_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/pages/baidu/search_result_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/pages/components/.empty_directory",
+    "lib/lazyman/generators/lazyman/app/pages/components/menu.rb",
     "lib/lazyman/generators/lazyman/app/pages/google/google_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/pages/google/google_search_result_page.rb.tt",
+    "lib/lazyman/generators/lazyman/app/pages/mantis/login_page.rb.tt",
+    "lib/lazyman/generators/lazyman/app/pages/mantis/my_view_page.rb.tt",
+    "lib/lazyman/generators/lazyman/app/pages/mantis/report_issue_page.rb.tt",
+    "lib/lazyman/generators/lazyman/app/pages/mantis/view_all_bug_page.rb.tt",
     "lib/lazyman/generators/lazyman/app/reports/.empty_directory",
     "lib/lazyman/generators/lazyman/app/test_data/baidu.yml",
+    "lib/lazyman/generators/lazyman/app/test_data/login_user.yml",
     "lib/lazyman/generators/lazyman/bin/console",
     "lib/lazyman/generators/lazyman/bin/console.bat",
     "lib/lazyman/generators/lazyman/bin/setup.rb.tt",
