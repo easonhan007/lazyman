@@ -12,13 +12,13 @@ describe Lazyman::Navigator do
 	end
 
 	it 'should start browser successfully' do
-		Watir::Browser.stub(:new)
+		Watir::Browser.stub(:new).and_return('browser')
 		Watir::Browser.should_receive(:new)
 		Lazyman::Navigator.new(@config)	
 	end
 
 	it "should be lazyman page" do
-		Watir::Browser.stub(:new)
+		Watir::Browser.stub(:new).and_return('browser')
 		Watir::Browser.should_receive(:new)
 		navi = Lazyman::Navigator.new(@config)	
 		navi.lazyman_page?(:CustomTestPage).should be_true
@@ -26,7 +26,7 @@ describe Lazyman::Navigator do
 	end
 
 	it 'should define goto methods for navigator' do
-		Watir::Browser.stub(:new)
+		Watir::Browser.stub(:new).and_return('browser')
 		Watir::Browser.should_receive(:new)
 		navi = Lazyman::Navigator.new(@config)	
 		navi.should respond_to(:goto_test_page)

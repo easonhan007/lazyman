@@ -6,6 +6,7 @@ module Lazyman
 			@config = config.clone
 			defined_browser?
 			@browser = start_browser
+			raise "can not start browser, maybe you need to download the driver for #{@config.browser}" if @browser.nil?
 			define_goto_methods
 		end
 
