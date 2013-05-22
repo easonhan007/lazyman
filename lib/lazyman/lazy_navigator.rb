@@ -1,4 +1,4 @@
-require 'Lazyman/errors'
+require 'lazyman/errors'
 module Lazyman
 	class Navigator
 		
