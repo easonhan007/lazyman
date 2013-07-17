@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "lazyman"
-  s.version = "0.1.11"
+  s.version = "0.1.12"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["easonhan"]
-  s.date = "2013-07-15"
+  s.date = "2013-07-17"
   s.description = "A test framework using watir-webdriver rspec and page-object"
   s.email = "nbkhic@qq.com"
   s.executables = ["lazyman"]
