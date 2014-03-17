@@ -77,6 +77,12 @@ Lazyman project has a clean and simple structure.
 
 * app->matchers: defind your owner rspec matchers here.
 
+How to fix rspec issue with GBK encoding
+----------------------------------------
+
+[Here](http://www.cnblogs.com/timsheng/p/3603679.html) is the solution.
+
+
 
 Contributing to lazyman
 -----------------------
